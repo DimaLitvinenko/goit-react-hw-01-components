@@ -4,7 +4,7 @@ import style from './friends.module.css';
 export default function FriendListItem({ avatar, name, isOnline, id }) {
   return (
     <>
-      <li key={id} className={style.item}>
+      <li key={id} className={style.friendItem}>
         {isOnline ? (
           <span className={style.status} style={{ border: 'green' }}>
             {isOnline}
@@ -14,7 +14,12 @@ export default function FriendListItem({ avatar, name, isOnline, id }) {
             {isOnline}
           </span>
         )}
-        <img className={style.avatar} src={avatar} alt={name} width="48" />
+        <img
+          className={style.friendAvatar}
+          src={avatar}
+          alt={name}
+          width="48"
+        />
         <p className={style.name}>{name}</p>
       </li>
     </>

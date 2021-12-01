@@ -1,4 +1,6 @@
 import './App.css';
+import Container from '../components/container/container';
+import Section from '../components/section/section';
 
 import UserProfile from '../components/user-profile/user-profile';
 import user from '../data/user-profile.json';
@@ -14,17 +16,19 @@ import transactions from '../data/transactions.json';
 
 export default function App() {
   return (
-    <div>
-      <UserProfile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics title="Upload stats" stats={data} />;
-      <FriendList friends={friends} />,
-      <TransactionHistory items={transactions} />;
-    </div>
+    <Container>
+      <Section>
+        <UserProfile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <Statistics title="Upload stats" stats={data} />;
+        <FriendList friends={friends} />,
+        <TransactionHistory items={transactions} />;
+      </Section>
+    </Container>
   );
 }
