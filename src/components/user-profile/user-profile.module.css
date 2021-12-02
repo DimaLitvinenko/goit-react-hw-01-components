@@ -14,18 +14,21 @@ ul {
   margin-bottom: 0;
   margin-top: 0;
 }
-
-/* img {
-    width: 100%;
-} */
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 .profile {
   max-width: 400px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 20px;
+  margin: 0 auto;
   background-color: #f0f8ff;
   text-align: center;
-  border: 1px solid gray;
   border-radius: 8px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-size: 14px;
@@ -46,7 +49,7 @@ ul {
   height: auto;
 }
 .username {
-  margin: 10px 0;
+  padding: 18px 0;
   font-weight: 700;
   font-size: 30px;
 }
@@ -59,10 +62,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 10px 0;
   list-style: none;
-  background-color: rgb(188, 175, 245);
-  border-top: 1px solid gray;
+  background-color: rgba(188, 175, 245, 0.5);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }

@@ -1,38 +1,50 @@
 .friendList {
-  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  /* display: flex;
+  flex-direction: column; */
+  max-width: 400px;
+  margin: 0 auto;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
 }
 .friendItem {
   display: flex;
-  justify-content: left;
-  padding: 20px 20px 20px 20px;
+  align-items: center;
+  padding: 15px 15px 15px 18px;
+  border-radius: 8px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+}
+.friendItem:not(:last-child) {
   margin-bottom: 20px;
-  background-color: rgb(247, 242, 242);
 }
 .status {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  margin-right: 20px;
-}
-.online {
-  background-color: rgb(19, 141, 39);
-}
-.notOnline {
-  background-color: rgb(211, 69, 69);
+  margin-left: auto;
 }
 .friendAvatar {
+  justify-self: center;
   width: 80px;
-  height: 80px;
-  background-color: #fff;
+  background-color: #f0f8ff;
   border-radius: 20%;
-  margin-right: 15px;
+  margin-left: auto;
 }
-.text {
-  font-size: 20px;
+.friendName {
+  font-size: 19px;
   font-weight: 800;
+  margin: 0 auto;
+}
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }

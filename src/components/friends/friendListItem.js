@@ -6,11 +6,11 @@ export default function FriendListItem({ avatar, name, isOnline, id }) {
     <>
       <li key={id} className={style.friendItem}>
         {isOnline ? (
-          <span className={style.status} style={{ border: 'green' }}>
+          <span className={style.status} style={{ backgroundColor: 'green' }}>
             {isOnline}
           </span>
         ) : (
-          <span className={style.status} style={{ border: 'red' }}>
+          <span className={style.status} style={{ backgroundColor: 'red' }}>
             {isOnline}
           </span>
         )}
@@ -20,7 +20,7 @@ export default function FriendListItem({ avatar, name, isOnline, id }) {
           alt={name}
           width="48"
         />
-        <p className={style.name}>{name}</p>
+        <p className={style.friendName}>{name}</p>
       </li>
     </>
   );

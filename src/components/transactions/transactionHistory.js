@@ -3,25 +3,28 @@ import style from './transactionHistory.module.css';
 
 export default function TransactionHistory({ items }) {
   return (
-    <table className={style.transactionTable}>
-      <thead className={style.tableHead}>
-        <tr>
-          <th className={style.item}>Type</th>
-          <th className={style.item}>Amount</th>
-          <th className={style.item}>Currency</th>
-        </tr>
-      </thead>
-
-      <tbody className={style.tableBody}>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id} className={style.tableList}>
-            <td className={style.item}>{type}</td>
-            <td className={style.item}>{amount}</td>
-            <td className={style.item}>{currency}</td>
+    <>
+      <h2 className={style.hidden}>Transaction</h2>
+      <table className={style.transactionTable}>
+        <thead className={style.tableHead}>
+          <tr>
+            <th className={style.tableHeadItem}>Type</th>
+            <th className={style.tableHeadItem}>Amount</th>
+            <th className={style.tableHeadItem}>Currency</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody className={style.tableBody}>
+          {items.map(({ id, type, amount, currency }) => (
+            <tr key={id} className={style.tableList}>
+              <td className={style.tableItem}>{type}</td>
+              <td className={style.tableItem}>{amount}</td>
+              <td className={style.tableItem}>{currency}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 }
 TransactionHistory.propTypes = {

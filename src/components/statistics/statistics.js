@@ -3,7 +3,7 @@ import style from './statistics.module.css';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section className={style.statistics}>
+    <div className={style.statistics}>
       {title && <h2 className={style.title}>{title.toUpperCase()}</h2>}
 
       <ul className={style.statList}>
@@ -18,7 +18,7 @@ export default function Statistics({ title, stats }) {
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 }
 Statistics.propTypes = {

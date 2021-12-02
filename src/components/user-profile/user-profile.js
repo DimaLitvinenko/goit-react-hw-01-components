@@ -5,6 +5,7 @@ export default function UserProfile(props) {
   const { username, tag, location, avatar, stats } = props;
   return (
     <div className={style.profile} key={tag}>
+      <h2 className={style.hidden}>UserProfile</h2>
       <div className={style.description}>
         <img src={avatar} alt={username} className={style.avatar} />
         <p className={style.username}>{username}</p>

@@ -1,46 +1,17 @@
-/* .Statistics {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    border: 1px solid gray;
-  }
-  
-  .Title {
-    text-transform: uppercase;
-  }
-  
-  .StatList {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .StatListItem {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    color: white;
-  }
-  
-  .Label {
-    margin-bottom: 10px;
-  }
-  */
 .statistics {
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: center;
   background-color: #f0f8ff;
-  border: 1px solid gray;
   border-radius: 8px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   line-height: 1.2;
 }
 .title {
-  padding: 18px;
+  padding: 15px 0;
   text-align: center;
+  font-size: 19px;
 }
 .statList {
   display: flex;
